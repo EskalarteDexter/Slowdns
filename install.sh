@@ -1,7 +1,7 @@
 #!/bin/bash
 #slowdns (Wegare)
 #printf 'ctrl+c' | crontab -e > /dev/null
-opkg update && opkg install unzip
+#opkg update && opkg install unzip
 #cek=$(cat /etc/openwrt_r*)
 if [[ $cek == *"LEDE"* ]] && [[ $cek == *"ar71xx"* ]]; then
 wget --no-check-certificate "http://script.psytech-vpn.com/Slowdns/slowfiles/lede/ar71xx.zip?raw=true" -O ~/ekstrak.zip && unzip ~/ekstrak.zip && cp ~/ar71xx/*.ipk ~/ && rm -rf ~/ekstrak.zip && rm -rf ~/ar71xx
@@ -39,8 +39,8 @@ wget --no-check-certificate "https://raw.githubusercontent.com/EskalarteDexter/S
 chmod +x /usr/bin/slowdns
 chmod +x /usr/bin/dns-client
 chmod +x /usr/bin/autorekonek-slowdns
-opkg install openvpn-openssl && opkg install ip-full && opkg install openssh-client && opkg install --force-depends *.ipk && opkg install lsof && opkg install fping screen python python3 coreutils-nohup
-rm -r ~/*.ipk
+#opkg install openvpn-openssl && opkg install ip-full && opkg install openssh-client && opkg install --force-depends *.ipk && opkg install lsof && opkg install fping screen python python3 coreutils-nohup
+#rm -r ~/*.ipk
 rm -r ~/install.sh
 mkdir -p ~/akun/
 touch ~/akun/slowdns.txt
