@@ -1,8 +1,8 @@
 #!/bin/bash
 #slowdns (Wegare)
-printf 'ctrl+c' | crontab -e > /dev/null
+#printf 'ctrl+c' | crontab -e > /dev/null
 opkg update && opkg install unzip
-cek=$(cat /etc/openwrt_r*)
+#cek=$(cat /etc/openwrt_r*)
 if [[ $cek == *"LEDE"* ]] && [[ $cek == *"ar71xx"* ]]; then
 wget --no-check-certificate "http://script.psytech-vpn.com/Slowdns/slowfiles/lede/ar71xx.zip?raw=true" -O ~/ekstrak.zip && unzip ~/ekstrak.zip && cp ~/ar71xx/*.ipk ~/ && rm -rf ~/ekstrak.zip && rm -rf ~/ar71xx
 elif [[ $cek == *"LEDE"* ]] && [[ $cek == *"brcm63xx"* ]]; then
@@ -20,15 +20,15 @@ wget --no-check-certificate "http://script.psytech-vpn.com/Slowdns/slowfiles/cc/
 elif [[ $cek == *"Chaos Calmer"* ]] && [[ $cek == *"sunxi"* ]]; then
 wget --no-check-certificate "http://script.psytech-vpn.com/Slowdns/slowfiles/cc/sunxi.zip?raw=true" -O ~/ekstrak.zip && unzip ~/ekstrak.zip && cp ~/sunxi/*.ipk ~/ && rm -rf ~/ekstrak.zip && rm -rf ~/sunxi
 elif [[ $cek == *"OpenWrt"* ]] && [[ $cek == *"aarch64_cortex-a53"* ]]; then
-wget --no-check-certificate "http://script.psytech-vpn.com/Slowdns/slowfiles/openwrt/sunxi.zip?raw=true" -O ~/ekstrak.zip && unzip ~/ekstrak.zip && cp ~/sunxi/*.ipk ~/ && rm -rf ~/ekstrak.zip && rm -rf ~/sunxi
-elif [[ $cek == *"OpenWrt"* ]] && [[ $cek == *"mips_24kc"* ]]; then
-wget --no-check-certificate "http://script.psytech-vpn.com/Slowdns/slowfiles/openwrt/ar71xx.zip?raw=true" -O ~/ekstrak.zip && unzip ~/ekstrak.zip && cp ~/ar71xx/*.ipk ~/ && rm -rf ~/ekstrak.zip && rm -rf ~/ar71xx
-elif [[ $cek == *"OpenWrt"* ]] && [[ $cek == *"mipsel_24kc"* ]]; then
-wget --no-check-certificate "http://script.psytech-vpn.com/Slowdns/slowfiles/openwrt/ramips.zip?raw=true" -O ~/ekstrak.zip && unzip ~/ekstrak.zip && cp ~/ramips/*.ipk ~/ && rm -rf ~/ekstrak.zip && rm -rf ~/ramips
-####elif [[ $cek == *"OpenWrt"* ]] && [[ $cek == *"x86"* ]]; then
+#wget --no-check-certificate "http://script.psytech-vpn.com/Slowdns/slowfiles/openwrt/sunxi.zip?raw=true" -O ~/ekstrak.zip && unzip ~/ekstrak.zip && cp ~/sunxi/*.ipk ~/ && rm -rf ~/ekstrak.zip && rm -rf ~/sunxi
+#elif [[ $cek == *"OpenWrt"* ]] && [[ $cek == *"mips_24kc"* ]]; then
+#wget --no-check-certificate "http://script.psytech-vpn.com/Slowdns/slowfiles/openwrt/ar71xx.zip?raw=true" -O ~/ekstrak.zip && unzip ~/ekstrak.zip && cp ~/ar71xx/*.ipk ~/ && rm -rf ~/ekstrak.zip && rm -rf ~/ar71xx
+#elif [[ $cek == *"OpenWrt"* ]] && [[ $cek == *"mipsel_24kc"* ]]; then
+#wget --no-check-certificate "http://script.psytech-vpn.com/Slowdns/slowfiles/openwrt/ramips.zip?raw=true" -O ~/ekstrak.zip && unzip ~/ekstrak.zip && cp ~/ramips/*.ipk ~/ && rm -rf ~/ekstrak.zip && rm -rf ~/ramips
+#elif [[ $cek == *"OpenWrt"* ]] && [[ $cek == *"x86"* ]]; then
 #wget --no-check-certificate "https://github.com/wegare123/backup/blob/main/openwrt/i386-pentium.zip?raw=true" -O ~/ekstrak.zip && unzip ~/ekstrak.zip && cp ~/i386-pentium/*.ipk ~/ && rm -rf ~/ekstrak.zip && rm -rf ~/i386-pentium
-elif [[ $cek == *"OpenWrt"* ]] && [[ $cek == *"x86_64"* ]]; then
-wget --no-check-certificate "http://script.psytech-vpn.com/Slowdns/slowfiles/openwrt/x86_64.zip?raw=true" -O ~/ekstrak.zip && unzip ~/ekstrak.zip && cp ~/x86_64/*.ipk ~/ && rm -rf ~/ekstrak.zip && rm -rf ~/x86_64
+#elif [[ $cek == *"OpenWrt"* ]] && [[ $cek == *"x86_64"* ]]; then
+#wget --no-check-certificate "http://script.psytech-vpn.com/Slowdns/slowfiles/openwrt/x86_64.zip?raw=true" -O ~/ekstrak.zip && unzip ~/ekstrak.zip && cp ~/x86_64/*.ipk ~/ && rm -rf ~/ekstrak.zip && rm -rf ~/x86_64
 else
 echo -e "your version is not detected!"
 exit
