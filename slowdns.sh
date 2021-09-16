@@ -27,11 +27,11 @@ echo '
 |_______/  \_______/|__/  \__/  \___/   \_______/|__/ 
 '
 echo "Inject slowdns by: Dexter Eskalarte"
-echo "1. Sett Profile"
+echo "1. Set Profile"
 echo "2. Start Inject"
 echo "3. Stop Inject"
-echo "4. Enable auto booting & auto rekonek"
-echo "5. Disable auto booting & auto rekonek"
+echo "4. Enable auto booting & auto reconnect"
+echo "5. Disable auto booting & auto reconnect"
 echo "e. exit"
 read -p "(default tools: 2) : " tools
 [ -z "${tools}" ] && tools="2"
